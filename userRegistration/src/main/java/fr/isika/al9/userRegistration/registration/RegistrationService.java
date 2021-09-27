@@ -68,11 +68,39 @@ public class RegistrationService {
         confirmationTokenService.setConfirmedAt(token);
         
         appUserService.enableAppUser(
-                confirmationToken.getAppUser().getEmail());
-        System.out.println(appUserService.enableAppUser(
-                confirmationToken.getAppUser().getEmail()));
+                confirmationToken.getAppUser().getUsername());
         
-        return "confirmed";
+        return "<div style=\"font-family:Helvetica,Arial,sans-serif;font-size:16px;margin:0;color:#0b0c0c\">\n" +
+        		"\n" +
+		        "<span style=\"display:none;font-size:1px;color:#fff;max-height:0\"></span>\n" +
+		        "\n" +
+		        "  <table role=\"presentation\" width=\"100%\" style=\"border-collapse:collapse;min-width:100%;width:100%!important\" cellpadding=\"0\" cellspacing=\"0\" border=\"0\">\n" +
+		        "    <tbody><tr>\n" +
+		        "      <td width=\"100%\" height=\"53\" bgcolor=\"#0b0c0c\">\n" +
+		        "        \n" +
+		        "        <table role=\"presentation\" width=\"100%\" style=\"border-collapse:collapse;max-width:580px\" cellpadding=\"0\" cellspacing=\"0\" border=\"0\" align=\"center\">\n" +
+		        "          <tbody><tr>\n" +
+		        "            <td width=\"70\" bgcolor=\"#0b0c0c\" valign=\"middle\">\n" +
+		        "                <table role=\"presentation\" cellpadding=\"0\" cellspacing=\"0\" border=\"0\" style=\"border-collapse:collapse\">\n" +
+		        "                  <tbody><tr>\n" +
+		        "                    <td style=\"padding-left:10px\">\n" +
+		        "                  \n" +
+		        "                    </td>\n" +
+		        "                    <td style=\"font-size:28px;line-height:1.315789474;Margin-top:4px;padding-left:10px\">\n" +
+		        "                      <span style=\"font-family:Helvetica,Arial,sans-serif;font-weight:700;color:#ffffff;text-decoration:none;vertical-align:top;display:inline-block\">Votre compte est activé</span>\n" +
+		        "                    </td>\n" +
+		        "                  </tr>\n" +
+		        "                </tbody></table>\n" +
+		        "              </a>\n" +
+		        "            </td>\n" +
+		        "          </tr>\n" +
+		        "        </tbody></table>\n" +
+		        "        \n" +
+		        "      </td>\n" +
+		        "    </tr>\n" +
+		        "  </tbody></table>\n" +
+		        "\n" +
+		        "</div></div>";
     }
 	
 	private String buildEmail(String name, String link) {

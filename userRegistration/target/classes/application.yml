@@ -2,6 +2,8 @@ server:
   error:
     include-message: always
     include-binding-errors: always
+  servlet:
+    session:      timeout: 120s
 
 spring:
   application:
@@ -12,20 +14,16 @@ spring:
     url: jdbc:mysql://${MYSQL_HOST:localhost}:3306/cryptonite
     username: cryptoadmin
   jpa:
+    open-in-view: true
     generate-ddl: true
     hibernate:
       ddl-auto: update
-    properties:
-      hibernate:
-        format_sql: true
     show-sql: true
-
   mail:
     host: localhost
     port: 1025
     username: hello
     password: hello
-
     properties:
       mail:
         smtp:

@@ -1,6 +1,5 @@
 package fr.isika.al9.userRegistration.appuser;
 
-import java.io.Console;
 import java.time.LocalDateTime;
 import java.util.UUID;
 
